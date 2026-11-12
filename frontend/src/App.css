@@ -1,0 +1,344 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f5ef;
+  color: #292b25;
+  font-family: 'DM Sans', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.nav {
+  height: 82px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav h2 {
+  font-family: 'Playfair Display';
+  font-size: 29px;
+}
+
+.nav h2 span {
+  color: #b56e50;
+}
+
+.nav div {
+  color: #77776e;
+  font-size: 13px;
+}
+
+.nav div span {
+  padding: 0 12px;
+  color: #b56e50;
+}
+
+.outline {
+  border: 1px solid #777;
+  background: transparent;
+  padding: 12px 22px;
+}
+
+.hero {
+  background: #303b32;
+  color: #f7f5ef;
+  padding: 75px 8% 90px;
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: #b97b5e;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font: 65px/1.12 'Playfair Display';
+  margin: 22px 0;
+}
+
+.hero h1 i {
+  color: #d9ad91;
+}
+
+.sub {
+  color: #d0d0c6;
+  margin-bottom: 38px;
+}
+
+.search {
+  display: flex;
+  align-items: end;
+  gap: 18px;
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.search label {
+  flex: 1;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.search label svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.search input {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 2px;
+  outline: none;
+  font: 14px 'DM Sans';
+  background: transparent;
+}
+
+.search button {
+  background: #b56e50;
+  color: white;
+  border: 0;
+  padding: 15px 22px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.results {
+  padding: 65px 8%;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-head h2,
+.room-panel h2 {
+  font: 36px 'Playfair Display';
+  margin: 8px 0;
+}
+
+.section-head span {
+  color: #888;
+  font-size: 13px;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hotel-card {
+  background: white;
+}
+
+.hotel-image {
+  height: 190px;
+  background: linear-gradient(135deg, #d9c9b7, #a9a18d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.hotel-image span {
+  position: absolute;
+  bottom: 15px;
+  left: 18px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hotel-info {
+  padding: 20px;
+}
+
+.place {
+  color: #b56e50;
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.hotel-info h3 {
+  font: 24px 'Playfair Display';
+  margin: 10px 0;
+}
+
+.hotel-info > p:not(.place) {
+  color: #777;
+  font-size: 13px;
+  min-height: 36px;
+}
+
+.amenities {
+  font-size: 11px;
+  color: #888;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+}
+
+.details {
+  background: none;
+  border: 0;
+  padding: 12px 0;
+  color: #a65f43;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.room-panel {
+  background: white;
+  padding: 28px;
+  margin-top: 35px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  background: none;
+}
+
+.room {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding: 16px 0;
+  gap: 15px;
+}
+
+.room h3 {
+  margin: 0;
+}
+
+.room p,
+.message {
+  color: #777;
+  font-size: 13px;
+}
+
+.room strong {
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-size: 12px;
+}
+
+@media(max-width:800px) {
+  .hotel-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search {
+    flex-wrap: wrap;
+  }
+
+  .search label {
+    min-width: 40%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media(max-width:550px) {
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav div {
+    display: none;
+  }
+
+  .room {
+    flex-wrap: wrap;
+  }
+}
+.booking-form {
+  margin-top: 25px;
+  padding: 25px;
+  background: #f7f5ef;
+  display: grid;
+  gap: 14px;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  font: inherit;
+}
+
+.booking-form button,
+.room button {
+  background: #b56e50;
+  color: white;
+  border: 0;
+  padding: 13px 20px;
+}
+
+.booking-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.confirmation {
+  margin-top: 35px;
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.confirmation-details {
+  background: #f7f5ef;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 500px;
+}
+
+.confirmation-details p {
+  color: #777;
+  font-size: 13px;
+}
+
+.confirmation-details h2 {
+  font-family: 'Playfair Display';
+  margin: 8px 0 22px;
+  overflow-wrap: anywhere;
+}
+
+.confirmation > button {
+  margin: 10px auto;
+}
